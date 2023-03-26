@@ -22,7 +22,7 @@ function clearList(list) {
 }
 
 // Load new joke
-function CreateAndAddListItem(list, text) {
+function createAndAddListItem(list, text) {
   const listItem = document.createElement("li");
   listItem.textContent = text;
   list.appendChild(listItem);

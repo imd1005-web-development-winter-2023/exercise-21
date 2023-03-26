@@ -22,7 +22,7 @@ function clearList(list) {
 }
 
 // Load new joke
-function CreateAndAddListItem(list, text) {
+function createAndAddListItem(list, text) {
   const listItem = document.createElement("li");
   listItem.textContent = text;
   list.appendChild(listItem);
@@ -45,14 +45,14 @@ async function submitHandler(event) {
       // Clear the list using the clearList function
       clearList(jokeList);
       // Load new joke
-      CreateAndAddListItem(jokeList, results.value);
+      createAndAddListItem(jokeList, results.value);
     })
     .catch((error) => {
       console.log(error);
       // Clear the list using the clearList function
       clearList(jokeList);
       // Load error text
-      CreateAndAddListItem(jokeList, error);
+      createAndAddListItem(jokeList, error);
     });
 }
 
